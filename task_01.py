@@ -17,7 +17,7 @@ if BASE == "Seattle Gray":
             HIGHLIGHT = raw_input("Which highlight color, Off-White or Paper"
                                   " White? ")
 elif BASE == "Manatee":
-    ACCENT = raw_input("Which accent color, Platinum Mist or Spartan Sage?")
+    ACCENT = raw_input("Which accent color, Platinum Mist or Spartan Sage? ")
     if ACCENT == "Platinum Mist":
         HIGHLIGHT = raw_input("Which highlight color, Bone White or Just"
                               " White? ")
