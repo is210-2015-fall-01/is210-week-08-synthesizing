@@ -15,44 +15,44 @@ PREQU2 = PREQU1.upper()
 if PRINC < 199999:
     if DURAT <= 15:
         if PREQU2 == 'Y':
-            int_rate = .0363
+            intrate = .0363
         else:
-            int_rate = .0465
+            intrate = .0465
     elif 16 <= DURAT and DURAT <= 20:
         if PREQU2 == 'Y':
-            int_rate = .0404
+            intrate = .0404
         else:
-            int_rate = .0498
+            intrate = .0498
     else:
         if PREQU2 == 'Y':
-            int_rate = .0577
+            intrate = .0577
         else:
-            int_rate = .0639
-            
+            intrate = .0639
+
 elif 200000 <= PRINC and PRINC <= 999999:
     if DURAT <= 15:
         if PREQU2 == 'Y':
-            int_rate = .0302
+            intrate = .0302
         else:
-            int_rate = .0398
+            intrate = .0398
     elif 16 <= DURAT and DURAT <= 20:
         if PREQU2 == 'Y':
-            int_rate = .0327
+            intrate = .0327
         else:
-            int_rate = .0408
+            intrate = .0408
     if DURAT >= 21 and PREQU2 == 'Y':
-        int_rate = .0466
-    
+        intrate = .0466
+
 elif PRINC >= 1000000 and PREQU2 == 'Y':
     if DURAT <= 15:
-        int_rate = .0205
+        intrate = .0205
     elif 16 <= DURAT and DURAT <= 20:
-        int_rate = .0262
+        intrate = .0262
 else:
     TOTAL = None
 
-TOTAL = PRINC*(1 + float((float(int_rate)/12))**(DURAT*12))
-TOTAl = int(TOTAL)
+TOTAL = PRINC*(1 + float((float(intrate)/12))**(DURAT*12))
+TOTAL = int(TOTAL)
 print PRINC
 print DURAT
 print PREQU
@@ -60,11 +60,10 @@ print TOTAL
 
 
 #REPORT = "'Loan Report for: {}'.format(NAME)
-'-' * 50
+#'-' * 50
 # 'Principal: ${}'.format(PRINC)
 # 'Duraction: {}yrs'.format{DURAT}
 # 'Pre-qualified?: {}'.format{PREQU}
 #
 # 'Total: $'.format()"
- 
 #print REPORT
