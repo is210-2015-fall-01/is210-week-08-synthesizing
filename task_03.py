@@ -7,9 +7,9 @@ import decimal
 
 NAME = raw_input("What is your name? ")
 PRIN = raw_input("What is the amount of your principal? ")
-PRIN = int(PRIN)
+PRIN = decimal.Decimal(PRIN)
 DUR = raw_input("For how many years is this loan being borrowed? ")
-DUR = int(DUR)
+DUR = decimal.Decimal(DUR)
 PREQ_RAW = raw_input("Are you pre-qualified for this loan? ")
 PREQ = PREQ_RAW.lower()
 PREQ = PREQ[0]
@@ -56,6 +56,7 @@ elif PRIN >= 1000000:
 
 if IR == None:
     IR = 0
+    TOTAL = 'None'
 
 IR = decimal.Decimal(IR)
 IR = IR / 100
@@ -65,7 +66,7 @@ TOTAL = int(round(PRIN * ((1 + (IR / 12))**(12 * DUR))))
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
-\t{:<15} {:>12,}\n\
+\t{:<15} '${:>12,}'\n\
 \t{:<15} {:>12}\n\
 \t{:<15} {:>12}\n\n\
 \t{:<15} {:>12,}'
