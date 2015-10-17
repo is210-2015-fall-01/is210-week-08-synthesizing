@@ -103,7 +103,7 @@ else:
 if R is None:
     TOTAL = None
 else:
-    TOTAL = round(decimal.Decimal(P * ((1+(decimal.Decimal(R/100)
-                                           / N))**(N * T))))
+    TOTAL = long(round(decimal.Decimal(P * ((1+(decimal.Decimal(R/100)
+                                           / N))**(N * T)))))
 REPORT = do_report(NAME, P, T, PREQ, TOTAL)
 print REPORT
