@@ -13,6 +13,7 @@ DUR = decimal.Decimal(DUR)
 PREQ_RAW = raw_input("Are you pre-qualified for this loan? ")
 PREQ = PREQ_RAW.lower()
 PREQ = PREQ[0]
+IR = None
 
 
 if PRIN >= 0 and PRIN <= 199999:
@@ -45,25 +46,21 @@ elif PRIN >= 200000 and PRIN <= 999999:
     elif DUR >= 21 and DUR <= 30:
         if PREQ == 'y':
             IR = 4.66
-        elif PREQ == 'n':
-            IR = None
 elif PRIN >= 1000000:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
             IR = 2.05
-        elif PREQ == 'n':
-            IR = None
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
             IR = 2.62
-        elif PREQ == 'n':
-            IR = None
-            
-IR = decimal.Decimal(IR)
-IR = IR / 100
 
-TOTAL = decimal.Decimal(PRIN * (1 + (IR / 12))**(12 * DUR))
-# TOTAL = round(TOTAL)
+if IR == None:
+    TOTAL = None
+else:
+    IR = decimal.Decimal(IR)
+    IR = IR / 100
+
+    TOTAL = int(round(PRIN * ((1 + (IR / 12))**(12 * DUR))))
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
