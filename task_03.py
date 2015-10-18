@@ -51,8 +51,11 @@ elif 1000000 <= PRINC:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             RATE = 0.0262
 N = 12.0
-TOTAL = round(PRINC * (1 + RATE/N)**(N*YEARS))
-
+if RATE:
+    TOTAL = round(PRINC * (1 + RATE/N)**(N*YEARS))
+else:
+    TOTAL = None
+    
 
 print ''
 print 'Loan Report For: {}'.format(NAME)
@@ -61,4 +64,7 @@ print '      Principle:{:>15}'.format(PRINC)
 print '      Duration:{:>13}'.format(YEARS)+'yrs'
 print '      Pre-qualified?:{:>10}'.format(PREQUAL)
 print ''
-print '      Total:{:>19.0f}'.format(TOTAL)
+if TOTAL is not None:
+    print '      Total:{:>19.0f}'.format(TOTAL)
+else:
+    print '      Total:{:>19}'.format(TOTAL)
