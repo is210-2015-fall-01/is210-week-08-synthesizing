@@ -62,9 +62,9 @@ else:
     TOTAL = 0
 
 IR = decimal.Decimal(IR)
-IR = IR / decimal.Decimal(100)
-ONE = decimal.Decimal(1.0)
-MONTH = decimal.Decimal(12.0)
+IR = IR / decimal.Decimal('100')
+ONE = decimal.Decimal('1')
+MONTH = decimal.Decimal('12')
 
 TOTAL = int(round(PRIN * ((ONE + (IR / MONTH))**(MONTH * DUR))))
 # TOTAL = (round(TOTAL)
