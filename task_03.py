@@ -4,8 +4,7 @@
 
 
 import decimal
-import locale
-locale.setlocale(locale.LC_ALL, "en_US.UTF-8")
+
 
 NAME = raw_input("What is your name? ")
 PRIN = raw_input("What is the amount of your principal? ")
@@ -78,6 +77,6 @@ REPORT = 'Loan Report for: {}\n\
 
 
 
-print REPORT.format(NAME, 'Principal:', locale.currency(PRIN), 'Duration:', str(DUR) + 'yrs', \
+print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs', \
                     'Pre-Qualified?:', PREQ_RAW, 'Total:', TOTAL)
 
