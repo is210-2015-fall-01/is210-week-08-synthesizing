@@ -24,7 +24,7 @@ if 0 <= PRINC and PRINC <= 199999:
             RATE = 0.0404
         elif PREQUAL == 'No' or PREQUAL == 'n':
             RATE = 0.0498
-    elif 21 < YEARS and YEARS <= 30:
+    elif 21 <= YEARS and YEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             RATE = 0.0577
         elif PREQUAL == 'No' or PREQUAL == 'n':
@@ -40,7 +40,7 @@ elif 200000 <= PRINC and PRINC <= 999999:
             RATE = 0.0327
         elif PREQUAL == 'No' or PREQUAL == 'n':
             RATE = 0.0408
-    elif 21 < YEARS and YEARS <= 30:
+    elif 21 <= YEARS and YEARS <= 30:
         if PREQUAL == 'Yes' or PREQUAL == 'y':
             RATE = 0.0466
 elif 1000000 <= PRINC:
