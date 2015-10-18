@@ -55,12 +55,14 @@ elif PRIN >= 1000000:
         if PREQ == 'y':
             IR = 2.62
 
-if IR == None:
+if IR:
+    pass
+else:
     IR = 0
-    TOTAL = 'None'
+    TOTAL = 0
 
 IR = decimal.Decimal(IR)
-IR = IR / 100
+IR = IR / decimal.Decimal(100)
 ONE = decimal.Decimal(1.0)
 MONTH = decimal.Decimal(12.0)
 
@@ -70,7 +72,7 @@ TOTAL = int(round(PRIN * ((ONE + (IR / MONTH))**(MONTH * DUR))))
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
-\t{:<15} {:>12}\n\
+\t{:<15} {:>12,}\n\
 \t{:<15} {:>12}\n\
 \t{:<15} {:>12}\n\n\
 \t{:<15} {:>12,}'
