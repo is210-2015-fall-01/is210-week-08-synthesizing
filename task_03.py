@@ -16,17 +16,17 @@ if PRINC <= 199999:
     if DURAT <= 15:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('3.63')
-        else:
+        elif PREQU2 == 'n':
             INTRAT = decimal.Decimal('4.65')
     elif 16 <= DURAT and DURAT <= 20:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('4.04')
-        else:
+        elif PREQU2 == 'n':
             INTRAT = decimal.Decimal('4.98')
     elif 21 <= DURAT and DURAT <= 30:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('5.77')
-        else:
+        elif PREQU2 == 'n':
             INTRAT = decimal.Decimal('6.39')
     else:
         INTRAT = None
@@ -35,12 +35,12 @@ elif 200000 <= PRINC and PRINC <= 999999:
     if DURAT <= 15:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('3.02')
-        else:
+        elif PREQU2 == 'n':
             INTRAT = decimal.Decimal('3.98')
     elif 16 <= DURAT and DURAT <= 20:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('3.27')
-        else:
+        elif PREQU2 == 'n':
             INTRAT = decimal.Decimal('4.08')
     elif DURAT >= 21 and PREQU2 == 'y':
         INTRAT = decimal.Decimal('4.66')
