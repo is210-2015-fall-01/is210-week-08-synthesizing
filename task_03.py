@@ -55,7 +55,7 @@ elif 1000000 <= PRINC:
             RATE = '0.0262'
 N = 12
 if RATE is not None:
-    RATE = decimal.Decimal(RATE) / 100
+    RATE = decimal.Decimal(RATE)
     TOTAL = int(round(PRINC * (1 + RATE/N)**(N*YEARS)))
 else:
     TOTAL = None
