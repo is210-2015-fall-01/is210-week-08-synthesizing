@@ -19,40 +19,40 @@ IR = None
 if PRIN >= 0 and PRIN <= 199999:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = 3.63
+            IR = decimal.Decimal(3.63)
         elif PREQ == 'n':
-            IR = 4.65
+            IR = decimal.Decimal(4.65)
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = 4.04
+            IR = decimal.Decimal(4.04)
         elif PREQ == 'n':
-            IR = 4.98
+            IR = decimal.Decimal(4.98)
     elif DUR >= 21 and DUR <= 30:
         if PREQ == 'y':
-            IR = 5.77
+            IR = decimal.Decimal(5.77)
         elif PREQ == 'n':
-            IR = 6.39
+            IR = decimal.Decimal(6.39)
 elif PRIN >= 200000 and PRIN <= 999999:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = 3.02
+            IR = decimal.Decimal(3.02)
         elif PREQ == 'n':
-            IR = 3.98
+            IR = decimal.Decimal(3.98)
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = 3.27
+            IR = decimal.Decimal(3.27)
         elif PREQ == 'n':
-            IR = 4.08
+            IR = decimal.Decimal(4.08)
     elif DUR >= 21 and DUR <= 30:
         if PREQ == 'y':
-            IR = 4.66
+            IR = decimal.Decimal(4.66)
 elif PRIN >= 1000000:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = 2.05
+            IR = decimal.Decimal(2.05)
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = 2.62
+            IR = decimal.Decimal(2.62)
 
 if IR:
     pass
