@@ -59,7 +59,7 @@ if RATE is not None:
     TOTAL = int(round(PRINC * (1 + RATE/N)**(N*YEARS)))
 else:
     TOTAL = None
-    
+
 print ''
 print 'Loan Report For: {}'.format(NAME)
 print '-------------------------------------------'
