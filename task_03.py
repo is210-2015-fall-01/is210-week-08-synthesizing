@@ -19,50 +19,46 @@ IR = None
 if PRIN >= 0 and PRIN <= 199999:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = decimal.Decimal(3.63)
+            IR = 3.63
         elif PREQ == 'n':
-            IR = decimal.Decimal(4.65)
+            IR = 4.65
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = decimal.Decimal(4.04)
+            IR = 4.04
         elif PREQ == 'n':
-            IR = decimal.Decimal(4.98)
+            IR = 4.98
     elif DUR >= 21 and DUR <= 30:
         if PREQ == 'y':
-            IR = decimal.Decimal(5.77)
+            IR = 5.77
         elif PREQ == 'n':
-            IR = decimal.Decimal(6.39)
+            IR = 6.39
 elif PRIN >= 200000 and PRIN <= 999999:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = decimal.Decimal(3.02)
+            IR = 3.02
         elif PREQ == 'n':
-            IR = decimal.Decimal(3.98)
+            IR = 3.98
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = decimal.Decimal(3.27)
+            IR = 3.27
         elif PREQ == 'n':
-            IR = decimal.Decimal(4.08)
+            IR = 4.08
     elif DUR >= 21 and DUR <= 30:
         if PREQ == 'y':
-            IR = decimal.Decimal(4.66)
+            IR = 4.66
 elif PRIN >= 1000000:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
-            IR = decimal.Decimal(2.05)
+            IR = 2.05
     elif DUR >= 16 and DUR <= 20:
         if PREQ == 'y':
-            IR = decimal.Decimal(2.62)
+            IR = 2.62
 
-if IR:
-    pass
+if IR is None:
+    TOTAL = None
 else:
-    IR = None
-    if IR is None:
-        TOTAL = None
-
-IR = decimal.Decimal(IR) / 100
-TOTAL = int(round(PRIN * ((1 + (IR / 12)) ** (12 * DUR))))
+    IR = decimal.Decimal(IR) / 100
+    TOTAL = int(round(PRIN * ((1 + (IR / 12)) ** (12 * DUR))))
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
