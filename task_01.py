@@ -11,10 +11,10 @@ if BASE == 'Seattle Grey':
     ACCENT = raw_input('Which accent color, "Cumulus Nimbus" or\
                        "Ceramic Glaze"?: ')
     if ACCENT == 'Cumulus Nimbus':
-        HILITE = raw_input('Which highlight color, "Off White" or\
+        HIGHLIGHT = raw_input('Which highlight color, "Off White" or\
                            "Paper White"?: ')
     else:
-        HILITE = raw_input('Which highlight color, "Basically White" or\
+        HIGHLIGHT = raw_input('Which highlight color, "Basically White" or\
                            "White"?: ')
 
 
@@ -22,9 +22,9 @@ else:
     ACCENT = raw_input('Which accent color, "Platinum Mist" or\
                        "Spartan Sage"?: ')
     if ACCENT == 'Platinum Mist':
-        HILITE = raw_input('Which highlight color, "Bone White" or\
+        HIGHLIGHT = raw_input('Which highlight color, "Bone White" or\
                            "Just White"?: ')
     else:
-        HILITE = raw_input('Which highlight color, "Fractal White" or\
+        HIGHLIGHT = raw_input('Which highlight color, "Fractal White" or\
                            "Not White"?: ')
-print FINAL_SELECTION.format(BASE, ACCENT, HILITE)
+print FINAL_SELECTION.format(BASE, ACCENT, HIGHLIGHT)
