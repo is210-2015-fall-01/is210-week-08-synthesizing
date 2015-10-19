@@ -16,7 +16,6 @@ PREQ = PREQ_RAW.lower()
 PREQ = PREQ[0]
 IR = None
 
-
 if PRIN >= 0 and PRIN <= 199999:
     if DUR >= 1 and DUR <= 15:
         if PREQ == 'y':
@@ -59,15 +58,11 @@ if IR:
     pass
 else:
     IR = None
-    if IR == None:
+    if IR is None:
         TOTAL = None
 
 IR = decimal.Decimal(IR) / 100
-
-
 TOTAL = int(round(PRIN * ((1 + (IR / 12)) ** (12 * DUR))))
-
-
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
@@ -76,8 +71,5 @@ REPORT = 'Loan Report for: {}\n\
 \t{:<15} {:>12}\n\n\
 \t{:<15} {:>12,}'
 
-
-
-print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs', \
+print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs',
                     'Pre-Qualified?:', PREQ_RAW, 'Total:', TOTAL)
-
