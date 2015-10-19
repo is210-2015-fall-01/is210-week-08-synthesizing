@@ -1,3 +1,4 @@
+
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 """This is a mortgage calculator. Lifetime compound interest of loan."""
@@ -62,10 +63,10 @@ else:
     INTRAT2 = decimal.Decimal(INTRAT) / 100
     TOTAL = int(round(PRINC * ((1 + (INTRAT2 / 12)) ** (DURAT * 12))))
 REPORT = 'Loan Report for: {}'.format(NAME)
-RPRINC = '      Principal:          ${:>2}'.format(PRINC)
-RDURAT = '      Duration:  {:>13}yrs'.format(DURAT)
-RPREQU = '      Pre-qualified?: {:>11}'.format(PREQU)
-RTOTAL = '      Total               ${:>5}'.format(TOTAL)
+RPRINC = '      Principal:{:>27}'.format(PRINC)
+RDURAT = '      Duration:{:>25}yrs'.format(DURAT)
+RPREQU = '      Pre-qualified?:{:>22}'.format(PREQU)
+RTOTAL = '      Total:{:>31}'.format(TOTAL)
 
 print ''
 print REPORT
