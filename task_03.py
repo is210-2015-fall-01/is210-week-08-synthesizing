@@ -12,7 +12,7 @@ PREQU = raw_input('Are you pre-qualified for this loan? ')
 PREQU1 = PREQU[:1]
 PREQU2 = PREQU1.lower()[:1]
 
-if PRINC < 199999:
+if PRINC <= 199999:
     if DURAT <= 15:
         if PREQU2 == 'y':
             INTRAT = decimal.Decimal('3.63')
