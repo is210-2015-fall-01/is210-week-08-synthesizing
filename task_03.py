@@ -73,7 +73,10 @@ REPORT = 'Loan Report for: {}\n\
 \t{:<15} {:12,}\n\
 \t{:<15} {:>12}\n\
 \t{:<15} {:>12}\n\n\
-\t{:<15} {:>12,}'
+\t{:<15} {:>12}'
+
+if not IR:
+    TOTAL = None
 
 print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs',
                     'Pre-Qualified?:', PREQ_RAW, 'Total:', TOTAL)
