@@ -59,7 +59,7 @@ if IR:
     pass
 else:
     IR = 0
-    TOTAL = 0
+    TOTAL = None
 
 IR = decimal.Decimal(IR)
 IR = IR / decimal.Decimal('100')
@@ -67,8 +67,6 @@ ONE = decimal.Decimal('1')
 MONTH = decimal.Decimal('12')
 
 TOTAL = int(round(PRIN * ((ONE + (IR / MONTH))**(MONTH * DUR))))
-# TOTAL = (round(TOTAL)
-
 
 REPORT = 'Loan Report for: {}\n\
 --------------------------------------------------------------------\n\
@@ -77,8 +75,5 @@ REPORT = 'Loan Report for: {}\n\
 \t{:<15} {:>12}\n\n\
 \t{:<15} {:>12,}'
 
-
-
-print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs', \
+print REPORT.format(NAME, 'Principal:', PRIN, 'Duration:', str(DUR) + 'yrs',
                     'Pre-Qualified?:', PREQ_RAW, 'Total:', TOTAL)
-
